@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="" href="images/iconblog.ico">
-    <link href="css/index.css" rel="stylesheet" >
+
+    <link rel="stylesheet" href="css/widgets/navbar.css">
+    <link rel="stylesheet" href="css/about.css">
+
     <title>About us | Mercuone</title>
     
 </head>
 <body>
+    
     <nav class="bg-nav  fixed-top">
         <div class="nav-container">
             <a class="navbar-logo" href="index.html">Mercuone Blog</a>
@@ -24,12 +28,111 @@
         </div>
     </nav>
 
-    <header class="title-header header-bg">
+    <!-- <header class="title-header header-bg">
         <div class="container px-4 text-center">
-            <h1 >About us</h1>
-            <p >หน้านี้ยังไม่ทำ</p>
+            <h1 >About Mercuone</h1>
+            
         </div>
-    </header>
+    </header> -->
+
+    <div class="about-box">
+    <section class="about-intro">
+        <div class="about-container">
+          <h1>Mercuone Timeline &darr;</h1>
+        </div>
+      </section>
+      
+      <section class="timeline">
+        <ul>
+          <li>
+            <div>
+              <time>2002</time> เกิดจากโรงบาลอุบลรักษ์            </div>
+          </li>
+          <li>
+            <div>
+              <time>2008</time> เข้าโรงเรียนอนุบาลอำนาจเจริญ            </div>
+          </li>
+          <li>
+            <div>
+              <time>2014</time> เข้าโรงเรียนอำนาจเจริญในระดับชั้น มัธยมศึกษาที่ 1-3            </div>
+          </li>
+          <li>
+            <div>
+              <time>2018</time> เข้าโรงเรียนอำนาจเจริญในระดับชั้น มัธยมศึกษาที่ 4-6            </div>
+          </li>
+          <li>
+            <div>
+              <time>2021</time> เข้าศึกษาต่อในระดับมหาวิทยาลัยในชั้นปีที่ 1 ที่มหาลัยพระจอมเกล้าพระนครเหนือ            </div>
+          </li>
+          <li>
+            <div>
+              <time>2022</time> เข้าเรียนคณะวิศวคอมพิวเตอร์ในชั้นปีที่ 2  ที่มหาลัยพระจอมเกล้าพระนครเหนือ          </div>
+          </li>
+          <li>
+            <div>
+              <time>2023</time> เข้าเรียนคณะวิศวคอมพิวเตอร์ในชั้นปีที่ 2  ที่มหาลัยพระจอมเกล้าพระนครเหนือ             </div>
+          </li>
+          <li>
+            <div>
+              <time>20xx</time> Coming soon            </div>
+          </li>
+          <li>
+            <div>
+              <time>20xx</time> Coming soon            </div>
+          </li>
+          <li>
+            <div>
+              <time>20xx</time> Coming soon            </div>
+          </li>
+          <li>
+            <div>
+              <time>2000</time> Coming soon            </div>
+          </li>
+          <li>
+            <div>
+              <time>2005</time> Coming soon            </div>
+          </li>
+        </ul>
+      </section>
+      
+
+    </div>
+
+    <script>
+        (function () {
+    "use strict";
+  
+    // define variables
+    var items = document.querySelectorAll(".timeline li");
+  
+    // check if an element is in viewport
+    // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  
+    function callbackFunc() {
+      for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+          items[i].classList.add("in-view");
+        }
+      }
+    }
+  
+    // listen for events
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+  })();
+  
+    </script>
     
 </body>
 </html>
