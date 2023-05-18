@@ -12,6 +12,7 @@
     <title>About us | Mercuone</title>
     
 </head>
+
 <body>
     
     <nav class="bg-nav  fixed-top">
@@ -98,13 +99,13 @@
 
     </div>
 
-    <script>
+    <script type="text/javascript">
         (function () {
     "use strict";
-  
+    
     // define variables
     var items = document.querySelectorAll(".timeline li");
-  
+    
     // check if an element is in viewport
     // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
     function isElementInViewport(el) {
@@ -117,7 +118,7 @@
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     }
-  
+    
     function callbackFunc() {
       for (var i = 0; i < items.length; i++) {
         if (isElementInViewport(items[i])) {
@@ -125,14 +126,15 @@
         }
       }
     }
-  
+    
     // listen for events
     window.addEventListener("load", callbackFunc);
     window.addEventListener("resize", callbackFunc);
     window.addEventListener("scroll", callbackFunc);
-  })();
-  
+    })();
+    
     </script>
+
     
 </body>
 </html>
